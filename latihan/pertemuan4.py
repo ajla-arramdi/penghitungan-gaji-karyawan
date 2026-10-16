@@ -73,50 +73,79 @@
 # print("uang kembali: ",+ (uangkembali))
 
 # Tugas 1
-nama = input("Masukan nama: ")
-jabatan = int(input("masukan jabatan: "))
-pendidikan = input("pendidikan: ")
-jumlah_jam = int(input("jumlah jam kerja: "))
+# nama = input("Masukan nama: ")
+# jabatan = int(input("masukan jabatan: "))
+# pendidikan = input("pendidikan: ")
+# jumlah_jam = int(input("jumlah jam kerja: "))
 
-#inisialisasi
-gapok = 3000000
+# #inisialisasi
+# gapok = 3000000
 
-#percabgan
-if jabatan == 1:
-    tunjangan == 0.05 * gapok
-elif jabatan == 2:
-    tunjangan = 0.1 * gapok
-elif jabatan == 3:
-    tunjangan = 0.15 * gapok
+# #percabgan
+# if jabatan == 1:
+#     tunjangan == 0.05 * gapok
+# elif jabatan == 2:
+#     tunjangan = 0.1 * gapok
+# elif jabatan == 3:
+#     tunjangan = 0.15 * gapok
+# else:
+#     tunjangan = 0
+
+# #percabgan
+# if pendidikan =="smk":
+#     tjg_pendidikan = 0.025 * gapok
+# elif pendidikan == "d1":
+#     tjg_pendidikan =  0.05 * gapok
+# elif pendidikan == "d3":
+#     tjg_pendidikan =  0.2 * gapok
+# elif pendidikan == "s1":
+#     tjg_pendidikan =  0.3 * gapok
+# else:
+#     tjg_pendidikan = 0
+
+# if jumlah_jam>=8:
+#     gaji_lembur = (jumlah_jam - 8) *3500
+# else:
+#     gaji_lembur = 0
+
+# total_gaji = gapok + tunjangan + tjg_pendidikan + gaji_lembur
+
+# print("\n----------------------------------------")
+# print("            pt dingin damai")
+# print("\n----------------------------------------")
+# print("Nama karyawan: ", nama)
+# print("honor yang diterima: ")
+# print("tunjangan jabatan rp: ", int(tunjangan))
+# print("tunjangan pendidikan: ",int(tjg_pendidikan))
+# print("gaji lembur Rp.", +int(gaji_lembur))
+# print("------------------------------------------")
+# print("total gaji Rp. ", int(total_gaji))
+
+kd_baju = input ("kode baju:")
+ukuran = input ("ukuran baju: ")
+
+if kd_baju == "PF" or kd_baju == "pf":
+    merk = "preface"
+    if ukuran == "S" or ukuran == "s":
+        harga_baju = 450000
+    elif ukuran == "M" or ukuran == "m":
+        harga_baju = 500000
+    else:
+        harga_baju = 0
+
+elif kd_baju == "AD" or kd_baju == "ad":
+    merk = "adidas"
+    if ukuran == "S" or ukuran == "s":
+        harga_baju = 650000
+    elif ukuran == "M" or ukuran == "m":
+        harga_baju = 700000
+    else:
+        harga_baju = 0
+
 else:
-    tunjangan = 0
+    merk = "kesalahan input kd merk"
+    harga_baju = 0
 
-#percabgan
-if pendidikan =="smk":
-    tjg_pendidikan = 0.025 * gapok
-elif pendidikan == "d1":
-    tjg_pendidikan =  0.05 * gapok
-elif pendidikan == "d3":
-    tjg_pendidikan =  0.2 * gapok
-elif pendidikan == "s1":
-    tjg_pendidikan =  0.3 * gapok
-else:
-    tjg_pendidikan = 0
-
-if jumlah_jam>=8:
-    gaji_lembur = (jumlah_jam - 8) *3500
-else:
-    gaji_lembur = 0
-
-total_gaji = gapok + tunjangan + tjg_pendidikan + gaji_lembur
-
-print("\n----------------------------------------")
-print("            pt dingin damai")
-print("\n----------------------------------------")
-print("Nama karyawan: ", nama)
-print("honor yang diterima: ")
-print("tunjangan jabatan rp: ", int(tunjangan))
-print("tunjangan pendidikan: ",int(tjg_pendidikan))
-print("gaji lembur Rp.", +int(gaji_lembur))
-print("------------------------------------------")
-print("total gaji Rp. ", int(total_gaji))
+print("\n-----------------------------")
+print("merk baju: "+str(merk))
+print("harga baju", harga_baju)
