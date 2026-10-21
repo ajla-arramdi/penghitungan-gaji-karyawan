@@ -3,16 +3,18 @@ kode_kasir = input("Input Kode Kasir SF/RMD: ")
 jenis_paket = input("Input Jenis Paket [A/B]: ")
 jumlah_beli = int(input("Input Jumlah Pesanan: "))
 
-if kode_kasir == "SF":
+if kode_kasir == "SF" or kode_kasir == "sf":
     namakasir = "Sifa"
-elif kode_kasir== "RMD":
+elif kode_kasir== "RMD" or kode_kasir == "rmd":
     namakasir = "Ramdhan"
+else:
+    namakasir = "tidak ditemukan"
 
-if jenis_paket == "A":
+if jenis_paket == "A" or jenis_paket == "a":
     paket = "Reguler"
     menu = "Nasi Putih, Ayam goreng, Tahu, Tempe, Lalapan, dan Sambal"
     harga = 15000
-elif jenis_paket == "B":
+elif jenis_paket == "B" or jenis_paket == "b":
     paket = "Deluxe"
     menu = "Nasi Putih, Ayam goreng, Tahu, Tempe, Bakwan udang, Lalapan, dan Sambal"
     harga = 20000
@@ -22,6 +24,7 @@ else:
     harga = 0
 
 total_harga = jumlah_beli * harga
+
 
 print("\n                  CAFE ONES GLATE              ")
 print("\n-----------------------------------------------")
